@@ -1,0 +1,18 @@
+.deleteItem{
+    color: white;
+    background: red;
+    padding: .2rem;
+    border-radius: 50%;
+}
+.flexitems{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    background: rgb(138, 162, 233);
+    padding: 1rem;
+    border: 2rem solid rgb(138, 162, 233);
+    border-bottom: 1px solid gray;
+}
+.completed{
+    text-decoration: line-through;
+}

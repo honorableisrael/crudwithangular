@@ -1,0 +1,9 @@
+<div [ngClass] = "setClass()">
+    <div class="flexitems">
+        <span>
+            <input (change)="onUserInput(todo)" type="checkbox" />
+            {{todo.title}}
+        </span>
+        <span (click) ="onUserClick(todo)" class="deleteItem">x</span>
+    </div>
+</div>

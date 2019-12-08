@@ -1,0 +1,22 @@
+<p>Hello {{name}}</p>
+<div class="namewrapper">
+    <div *ngFor="let person of persons">
+        <div >
+            {{person.name}} {{person.dateOfBirth}}
+        </div>
+    </div>
+</div>
+<label for="username">
+    <span>Username</span>
+    <input type="text" id="username"  value=""/>
+</label>
+<br>
+<label for="password">
+    <span>Password</span>
+    <input type="password" id="password"  value=""/>
+</label>
+<div>
+    <button type="submit" (click)="submitForm">
+        Submit
+    </button>
+</div>
