@@ -9,12 +9,20 @@ import { TodoService } from '../services/todo.service';
 })
 export class TodosComponent implements OnInit {
   todos:Todo[];
+  visible:number=5
   constructor(private todoService:TodoService) { }
 
   ngOnInit() {
     this.todoService.getTodos().subscribe(res=>{
-      this.todos = res
+      this.todos = res.splice(0,this.visible)
     })
+  }
+  increaseTheVisible(){
+    this.visible += 5 
+    this.todoService.getTodos().subscribe(res=>{
+      this.todos = res.splice(0,this.visible)
+    })
+   
   }
 
 }
