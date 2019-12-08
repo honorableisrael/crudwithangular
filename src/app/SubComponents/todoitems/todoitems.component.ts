@@ -1,5 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { Todo } from 'src/models/todo';
+import { del } from 'selenium-webdriver/http';
 
 @Component({
   selector: 'app-todoitems',
@@ -22,5 +23,9 @@ export class TodoitemsComponent implements OnInit {
   }
   onUserInput(todo){
         this.todo.completed = !this.todo.completed    // change to completed
+  }
+  onUserDelete(todo:object){
+    const deletedItem = [todo].splice(1)
+    // return this.todo = deletedItem;
   }
 }
